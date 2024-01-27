@@ -30,7 +30,7 @@ export default function HomPage() {
                     <td><button onClick={() => handleClick('4')}>4</button></td>
                     <td><button onClick={() => handleClick('5')}>5</button></td>
                     <td><button onClick={() => handleClick('6')}>6</button></td>
-                    <td><button onClick={() => handleClick('')}></button></td>
+                    <td><button onClick={() => handleClick('*')}>*</button></td>
                 </tr>
                 <tr>
                     <td><button onClick={() => handleClick('1')}>1</button></td>
