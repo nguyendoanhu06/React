@@ -8,6 +8,12 @@ export default function HomPage() {
         setResult(result + value);
     };
 
+    const calculateResult = () => {
+        const newResult = result;
+        const resultValue = eval(newResult);
+        setResult(resultValue.toString());
+    };
+
     return (
         <div>
             <table>
@@ -24,7 +30,7 @@ export default function HomPage() {
                     <td><button onClick={() => handleClick('4')}>4</button></td>
                     <td><button onClick={() => handleClick('5')}>5</button></td>
                     <td><button onClick={() => handleClick('6')}>6</button></td>
-                    <td><button onClick={() => handleClick('*')}>*</button></td>
+                    <td><button onClick={() => handleClick('')}></button></td>
                 </tr>
                 <tr>
                     <td><button onClick={() => handleClick('1')}>1</button></td>
@@ -34,11 +40,11 @@ export default function HomPage() {
                 </tr>
                 <tr>
                     <td><button onClick={() => handleClick('0')}>0</button></td>
-                    <td><button className='caculate' >=</button></td>
+                    <td><button className='caculate' onClick={calculateResult}>=</button></td>
                     <td><button onClick={() => setResult('')}>C</button></td>
-                    <td><button onClick={() => handleClick('+')}>+</button></td>
+                    <td><button className='plus' onClick={() => handleClick('+')}>+</button></td>
                 </tr>
             </table>
         </div>
     );
-}
+} 
